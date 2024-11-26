@@ -1,4 +1,4 @@
-// File: D:\nextjs__Project\A1est-nextjs\app\contact\page.tsx
+// File: D:\a1est__nextjs\app\contact\page.tsx
 import * as entry from '../../../../app/contact/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

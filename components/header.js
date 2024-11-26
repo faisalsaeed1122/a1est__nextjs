@@ -17,15 +17,15 @@ export default function Header() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.menuContainer}>
-        <h1 className={styles.logo}>
+        <Link href="/" className={styles.logo}>
           <Image
-            src="../assets/images/logo.webp"
-            alt="Next.js logo"
+            src="/logo.webp"
+            alt="A1estimation"
             width={148}
             height={74}
             priority
           />
-        </h1>
+        </Link>
 
         {/* Desktop Links */}
         <div className={`${styles.navLinks} ${isOpen ? styles.show : ""}`}>

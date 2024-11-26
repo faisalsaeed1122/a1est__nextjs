@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Button from "../components/button";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -38,39 +39,47 @@ export default function Contact() {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "0 auto", padding: "1rem" }}>
-      <h1>Contact Us</h1>
+    <div>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name</label>
+        <div className="form-floating mb-3">
           <input
             type="text"
             name="name"
+            placeholder=""
+            className="form-control"
             value={formData.name}
             onChange={handleChange}
             required
           />
+          <label>Name</label>
         </div>
-        <div>
-          <label>Email</label>
+        <div className="form-floating mb-3">
           <input
             type="email"
             name="email"
+            placeholder=""
+            className="form-control"
             value={formData.email}
             onChange={handleChange}
             required
           />
+          <label>Email</label>
         </div>
-        <div>
-          <label>Message</label>
+        <div className="form-floating mb-3">
           <textarea
             name="message"
+            placeholder=""
+            className="form-control"
             value={formData.message}
             onChange={handleChange}
             required
           />
+          <label>Message</label>
         </div>
-        <button type="submit">Send</button>
+
+        <Button type="submit" variant="primary">
+          Submit
+        </Button>
       </form>
       {status && <p>{status}</p>}
     </div>
