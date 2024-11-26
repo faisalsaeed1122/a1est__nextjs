@@ -1,0 +1,90 @@
+@import "../scss/custom-variables";
+@import "../scss/custom-mixins";
+
+.sliding__btn {
+  position: relative;
+  @include transition;
+  height: 55px;
+  @include flex-center;
+  padding: 0 2rem;
+  border: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    @include border-radius(50px);
+    width: 55px;
+    height: 55px;
+    @include transition;
+  }
+  span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    stroke-width: 2;
+    transform: translateX(-5px);
+    @include transition;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+    svg {
+      transform: translateX(0);
+    }
+  }
+
+  &.primary {
+    color: $brand-color;
+    &:before {
+      background: rgba($brand-color, 0.2);
+    }
+    svg {
+      stroke: $brand-color;
+    }
+    &:hover {
+      color: $white-color;
+      &::before {
+        background: rgba($brand-color, 1);
+      }
+      svg {
+        stroke: $white-color;
+      }
+    }
+  }
+
+  &.secondary {
+    color: $white-color;
+    &:before {
+      background: rgba($white-color, 0.2);
+    }
+    svg {
+      stroke: $white-color;
+    }
+    &:hover {
+      color: $brand-color;
+      &::before {
+        background: rgba($white-color, 1);
+      }
+      svg {
+        stroke: $brand-color;
+      }
+    }
+  }
+}

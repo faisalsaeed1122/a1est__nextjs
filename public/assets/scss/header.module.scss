@@ -1,0 +1,106 @@
+@import "../scss/custom-variables";
+@import "../scss/custom-mixins";
+/* General Reset */
+
+/* Header Container */
+.navbar {
+  background: rgba($brand-color, 0.6);
+  @include border-radius(50px);
+  padding: 10px 2rem;
+  // position: fixed;
+  // width: 100%;
+  // margin: 25px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  z-index: 100;
+
+  @media (max-width: 767.98px) {
+    padding: 5px 24px;
+  }
+}
+
+.menuContainer {
+  width: 100%;
+  @include flex-center-vert;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  margin-bottom: 0;
+  img {
+    width: 100px !important;
+    height: 100%;
+  }
+}
+
+.navItem {
+  color: white;
+  @include border-radius(50px);
+  font-size: 15px;
+  padding: 8px 20px 8px 20px !important;
+  text-transform: uppercase;
+  font-weight: 500;
+  &:hover {
+    background: $white-color;
+    color: $black-color;
+  }
+}
+
+/* Toggle Button (Hamburger and Close Icon) */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  color: $white-color;
+  @include border-radius(50px);
+
+  .hamburgerIcon {
+    font-size: 24px;
+    i {
+      display: flex;
+    }
+  }
+
+  .closeIcon {
+    font-size: 24px;
+    i {
+      display: flex;
+    }
+  }
+
+  // &:hover {
+  //   background: rgba($white-color, 0.6);
+  // }
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    background: rgba($brand-second-color, 0.9);
+    @include border-radius(20px);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

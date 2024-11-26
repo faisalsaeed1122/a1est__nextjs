@@ -1,0 +1,19 @@
+@import "../scss/custom-variables";
+@import "../scss/custom-mixins";
+// @import "../scss/reset";
+// @import "../scss/typography";
+// @import "../scss/ui-elements";
+// @import "../scss/layout";
+
+.faqs {
+  padding: 2rem;
+  @include border-radius(20px);
+  background: $light-grey-color;
+  // @include media-breakpoint-down(lg) {
+  //     @include padding(1.5rem, 1.5rem, 1.5rem, 1.5rem);
+  // }
+
+  // @include media-breakpoint-down(md) {
+  //     @include padding(1rem, 1rem, 1rem, 1rem);
+  // }
+}
