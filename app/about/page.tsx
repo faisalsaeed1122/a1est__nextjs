@@ -2,7 +2,7 @@
 // import Image from "next/image";
 // // import clsx from "clsx";
 // // import Link from "next/link";
-import styles from "../../public/assets/scss/about.module.scss";
+import styles from "../../public/assets/scss/pages/about.module.scss";
 import Header from "../../components/header";
 import WelcomeText from "../../components/WelcomeText";
 import Footer from "../../components/footer";

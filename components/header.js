@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "../public/assets/scss//header.module.scss";
+import DarkModeToggle from "@/components/DarkModeToggle";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Header() {
       <div className={styles.menuContainer}>
         <Link href="/" className={styles.logo}>
           <Image
-            src="/logo.webp"
+            src="/beta/assets/images/logo.webp"
             alt="A1estimation"
             width={148}
             height={74}
@@ -44,6 +45,7 @@ export default function Header() {
           <Link href="/contact" className={styles.navItem}>
             Contact
           </Link>
+          <DarkModeToggle />
         </div>
 
         {/* Toggle Button */}

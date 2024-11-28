@@ -7,6 +7,8 @@ import Footer from "../../../components/footer";
 import GetStarted from "../../../components/GetStarted";
 import servicesData from "../../../public/assets/data/services.json";
 import { notFound } from "next/navigation";
+import styles from "../../../public/assets/scss/pages/services.module.scss";
+import Details from "../../../components/details";
 
 type Service = {
   slug: string;
@@ -40,9 +42,9 @@ export default function ServiceDetail({ params }: ServiceDetailProps) {
     <div>
       <Container>
         <Header />
-        <section className="serviceDetail__wrapper">
-          <div className="mainHeading__wrap">
-            <figure className="image__holder">
+        <section className={styles.serviceDetail__wrapper}>
+          <div className={styles.mainHeading__wrap}>
+            <figure className={styles.image__holder}>
               <Image
                 src={
                   service.image.startsWith("/")
@@ -55,16 +57,24 @@ export default function ServiceDetail({ params }: ServiceDetailProps) {
                 priority
               />
             </figure>
-            <div className="text">
-              <Link href="/services">
-                <button type="button" aria-label="Go back to services">
-                  <i className="bi bi-arrow-left-short"></i>
-                </button>
-              </Link>
+
+            <div className={styles.text}>
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
+                  <Link href="/">Home</Link>
+                </li>
+                <li className="breadcrumb-item">
+                  <Link href="/services">Services</Link>
+                </li>
+                <li className="breadcrumb-item active">{service.title}</li>
+              </ol>
               <h1>{service.title}</h1>
             </div>
           </div>
-          <p>{service.details}</p>
+          <p>
+            {" "}
+            <Details content={service.details} />
+          </p>
         </section>
       </Container>
       <section className="Specialize__Trades">

@@ -1,0 +1,68 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+// @import "../scss/reset";
+// @import "../scss/typography";
+// @import "../scss/ui-elements";
+// @import "../scss/layout";
+.about {
+  p {
+    font-size: 35px;
+    text-align: center;
+  }
+}
+
+.stats__wrap {
+  .heading {
+    @include flex-center-horiz;
+    flex-direction: column;
+    height: 100%;
+
+    @media (max-width: 767.98px) {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      color: $brand-color;
+      font-size: 40px;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+    span {
+      font-size: 20px;
+    }
+  }
+  .stats__counter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+
+    @media (max-width: 767.98px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin: 0 2rem;
+    }
+
+    div {
+      background-color: var(--card-bg);
+      // background: $white-color;
+      padding: 35px;
+      height: 180px;
+      @include flex-center;
+      flex-direction: column;
+      font-size: 30px;
+      text-align: center;
+      @include border-radius(10px);
+      box-shadow: 0px 3px 30px rgba($black-color, 0.1);
+
+      h3 {
+        font-size: 50px;
+        color: $brand-color;
+        font-weight: 700;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}

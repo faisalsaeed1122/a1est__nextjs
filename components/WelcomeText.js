@@ -2,10 +2,11 @@
 // import { usePathname } from "next/navigation";
 // import clsx from "clsx";
 import Image from "next/image";
+import Figure from "react-bootstrap/Figure";
 
 export default function WelcomeText() {
   return (
-    <figure className="welcome__figure">
+    <Figure className="welcome__figure">
       <Image
         className="dark:invert"
         src="/assets/images/quantity-takeoff.jpg"
@@ -35,6 +36,6 @@ export default function WelcomeText() {
           </li>
         </ul>
       </div>
-    </figure>
+    </Figure>
   );
 }

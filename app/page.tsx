@@ -1,4 +1,4 @@
-import styles from "../public/assets/scss/home.module.scss";
+import styles from "../public/assets/scss/pages/home.module.scss";
 
 // import clsx from "clsx";
 import Link from "next/link";
@@ -14,7 +14,7 @@ import Container from "react-bootstrap/Container";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <div className="Hero__Wrapper">
         <Container>
           <Header />
@@ -32,9 +32,11 @@ export default function Home() {
             and Real estate industry.
           </p>
           <WelcomeText />
-          <Link href="/about">
-            <Button variant="primary">More About Us</Button>
-          </Link>
+          <div className="d-flex justify-content-center">
+            <Link href="/about">
+              <Button variant="primary">More About Us</Button>
+            </Link>
+          </div>
         </Container>
       </section>
 
@@ -53,6 +55,6 @@ export default function Home() {
       <div className={styles.shape} />
       <GetStarted />
       <Footer />
-    </main>
+    </div>
   );
 }

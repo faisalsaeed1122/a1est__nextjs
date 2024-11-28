@@ -49,7 +49,7 @@ export default function OurSpecialization() {
         spaceBetween={30} // Space between slides
         slidesPerView={1} // Number of slides visible at a time
         navigation={false} // Enable navigation
-        autoplay={false} // Enable autoplay
+        autoplay={true} // Enable autoplay
         // slidesOffsetBefore={50} // Add 50px margin on the left
         // slidesOffsetAfter={50} // Add 50px margin on the right
         grabCursor={true}

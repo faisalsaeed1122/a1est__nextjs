@@ -1,5 +1,5 @@
 import styles from "../public/assets/scss/footer.module.scss";
-
+import Image from "next/image";
 import Link from "next/link";
 function Footer() {
   return (
@@ -44,6 +44,23 @@ function Footer() {
           </ul>
         </div>
         <p className={styles.copyright}>Copyright © 2010 - 2024 a1est.com</p>
+
+        <div className={styles.developed__by}>
+          <h5>Deveoped By</h5>
+          <Link
+            href="http://wearecreative.net"
+            target="_blank"
+            className={styles.logo}
+          >
+            <Image
+              src="/beta/assets/images/wearecreative-logo.svg"
+              alt="Wearecreative"
+              width={35}
+              height={30}
+              priority
+            />
+          </Link>
+        </div>
       </div>
     </footer>
   );

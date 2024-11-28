@@ -41,7 +41,9 @@ export default function RootLayout({
       >
         {children}
       </body> */}
-      <body className={`${rajdhani.className} antialiased`}>{children}</body>
+      <body className={`${rajdhani.className} antialiased`}>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

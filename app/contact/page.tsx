@@ -6,6 +6,10 @@ import Header from "../../components/header";
 import ContactForm from "../../components/ContactForm";
 import Footer from "../../components/footer";
 import Container from "react-bootstrap/Container";
+
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
 export default function Page() {
   return (
     <div>
@@ -13,24 +17,42 @@ export default function Page() {
         <Header />
         <h1 className="heading__lg">Contact Us</h1>
         <section className="contact__wrapper">
-          <p className="mb-5">
-            Get in touch with out team to learn more about A1Estimation
-          </p>
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="">
-                <div className="number">
-                  <i className="bi bi-telephone"></i> +1 (404) 551-2288
+          <Row>
+            <Col lg={6}>
+              <div className="Form__Wrapper">
+                <h2>Get in touch</h2>
+                <p className="mb-3">
+                  Get in touch with our team to learn more about A1Estimation
+                </p>
+                <ContactForm />
+              </div>
+            </Col>
+            <Col lg={{ span: 5, offset: 1 }}>
+              <div className="contact__info">
+                <div className="contactInfo__item">
+                  <i className="bi bi-pin-map"></i>
+                  <div className="">
+                    <span>Location:</span>
+                    <h2>907 Six OAKS CIR Apt. # B Norcross GA 30093</h2>
+                  </div>
                 </div>
-                <div className="email">
-                  <i className="bi bi-envelope"></i> info@a1est.com
+                <div className="contactInfo__item">
+                  <i className="bi bi-envelope-open"></i>
+                  <div className="">
+                    <span>Email:</span>
+                    <h2> info@a1est.com</h2>
+                  </div>
+                </div>
+                <div className="contactInfo__item">
+                  <i className="bi bi-telephone"></i>
+                  <div>
+                    <span>Phone:</span>
+                    <h2>+1 (404) 551-2288</h2>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-6">
-              <ContactForm />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </section>
       </Container>
       <Footer />

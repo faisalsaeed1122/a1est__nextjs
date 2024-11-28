@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../../public/assets/scss/faqs.module.scss";
+import styles from "../../public/assets/scss/pages/faqs.module.scss";
 import Header from "../../components/header";
 import OurSpecialization from "../../components/OurSpecialization";
 import Footer from "../../components/footer";

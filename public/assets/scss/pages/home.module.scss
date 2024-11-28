@@ -1,0 +1,216 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.Hero__Wrapper {
+  position: relative;
+  margin-bottom: 6rem;
+  overflow: hidden;
+
+  @media (max-width: 767.98px) {
+    margin-bottom: 3rem;
+  }
+
+  .Hero__Slider {
+    margin-top: -118px;
+
+    @media (max-width: 767.98px) {
+      margin-top: -90px;
+    }
+
+    .slider__item {
+      position: relative;
+      overflow: hidden;
+      min-height: 700px;
+
+      @media (max-width: 767.98px) {
+        min-height: 550px;
+      }
+    }
+    .image__holder {
+      @include border-radius(20px);
+
+      img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        filter: brightness(40%);
+        @include border-radius(20px);
+        @include object-fit-cover;
+      }
+    }
+    .HeroWith__Text {
+      @include flex-center-horiz;
+      height: 100%;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      padding: 6rem;
+
+      @media (max-width: 767.98px) {
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+        color: $white-color;
+        @media (max-width: 767.98px) {
+          font-size: 2.5rem;
+        }
+      }
+      p {
+        color: $white-color;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+.welcome__wrap {
+  @include flex-center;
+  flex-direction: column;
+  p {
+    text-align: center;
+    line-height: 1.5;
+    @include margin(0, 0, 30px, 0);
+    font-size: 2rem;
+  }
+}
+
+.Specialize__Trades {
+  // background: #e7f0ff;
+  background-color: var(--section-bg);
+  @include padding(3rem, 2rem, 3rem, 2rem);
+  margin-bottom: 7rem;
+
+  @media (max-width: 767.98px) {
+    margin-bottom: 3rem;
+  }
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: $brand-color;
+    @include margin(0, 0, 3rem, 0);
+  }
+  .swiper-wrapper {
+    margin-bottom: 5rem;
+    @media (max-width: 767.98px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .slider__item {
+    background: $white-color;
+    padding: 35px;
+    height: 180px;
+    @include flex-center;
+    font-size: 30px;
+    text-align: center;
+    @include border-radius(10px);
+    box-shadow: 0px 3px 30px rgba($black-color, 0.1);
+    color: $brand-second-color;
+
+    @media (max-width: 767.98px) {
+      margin: 1.5rem;
+    }
+  }
+}
+
+.Testimonials {
+  .heading__with__line {
+    text-align: center;
+    color: $brand-color;
+    @include margin(0, 0, 0, 0);
+    font-size: 40px;
+    position: relative;
+    &:before {
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      content: "";
+      background: $brand-color;
+      height: 2px;
+      width: 45px;
+      margin: auto;
+      right: 0;
+    }
+  }
+
+  .Testimonial__Slider {
+    .swiper-wrapper {
+      margin-bottom: 2rem;
+    }
+
+    .testimonial-holder {
+      // background: $white-color;
+      background-color: var(--card-bg);
+      text-align: center;
+      box-shadow: 0px 3px 30px rgba($black-color, 0.1);
+      @include margin(50px, 100px, 40px, 100px);
+      @include padding(50px, 50px, 50px, 50px);
+      @include image-border;
+      @include border-radius(10px);
+
+      @media (max-width: 767.98px) {
+        @include margin(50px, 50px, 50px, 50px);
+        @include padding(2rem, 2rem, 2rem, 2rem);
+      }
+
+      &__testi {
+        line-height: 1.5;
+        font-size: 25px;
+        @include margin(0, 0, 20px, 0);
+      }
+      &__name {
+        font-size: 25px;
+        display: block;
+        @include margin(0, 0, 0, 0);
+      }
+      &__designation {
+        font-size: 18px;
+        display: block;
+        color: $brand-color;
+      }
+    }
+  }
+}
+
+.swiper-button-next {
+  background: $brand-second-color;
+  @include border-radius(50%);
+  height: 45px !important;
+  width: 45px !important;
+  @include flex-center;
+  &:after {
+    font-family: "bootstrap-icons" !important;
+    content: "\F135" !important;
+    font-size: 22px !important;
+    color: $white-color !important;
+  }
+
+  @media (max-width: 767.98px) {
+    display: none !important;
+  }
+}
+.swiper-button-prev {
+  background: $brand-second-color;
+  @include border-radius(50%);
+  height: 45px !important;
+  width: 45px !important;
+  @include flex-center;
+
+  &:after {
+    font-family: "bootstrap-icons" !important;
+    content: "\F12C" !important;
+    font-size: 22px !important;
+    color: $white-color !important;
+  }
+
+  @media (max-width: 767.98px) {
+    display: none !important;
+  }
+}

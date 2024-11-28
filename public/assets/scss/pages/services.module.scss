@@ -1,0 +1,132 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+.serviceCard__wrapper {
+  .service__card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 3px 30px rgba($black-color, 0.2);
+    margin-bottom: 3rem;
+    @include border-radius(20px);
+    @include transition;
+
+    @media (max-width: 767.98px) {
+      margin-bottom: 1.5rem;
+    }
+
+    .image__holder {
+      @include border-radius(20px);
+      width: 100%;
+      @include transition;
+      img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        filter: brightness(40%);
+        @include border-radius(20px);
+        @include object-fit-cover;
+        @include transition;
+      }
+    }
+    .serviceCard__text {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      flex-direction: column;
+      color: #fff;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      padding: 6rem;
+      align-items: flex-start;
+
+      @media (max-width: 767.98px) {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: $white-color;
+
+        @media (max-width: 767.98px) {
+          font-size: 2.5rem;
+        }
+      }
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: $white-color;
+
+        @media (max-width: 767.98px) {
+          display: none;
+        }
+      }
+    }
+
+    &:hover {
+      .image__holder {
+        img {
+          transform: scale(1.1);
+
+          @media (max-width: 767.98px) {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.serviceDetail__wrapper {
+  .mainHeading__wrap {
+    position: relative;
+    min-height: 300px;
+    margin-bottom: 2rem;
+
+    @media (max-width: 767.98px) {
+      min-height: 200px;
+    }
+
+    .image__holder {
+      @include border-radius(20px);
+      img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        filter: brightness(40%);
+        @include border-radius(20px);
+        @include object-fit-cover;
+      }
+    }
+    .text {
+      height: 100%;
+      color: $white-color;
+      width: 100%;
+      position: absolute;
+      //   @include flex-center;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+
+      @media (max-width: 767.98px) {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 0;
+        text-align: center;
+        text-transform: uppercase;
+        color: $white-color;
+
+        @media (max-width: 767.98px) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+  p {
+    font-size: 30px;
+  }
+}
