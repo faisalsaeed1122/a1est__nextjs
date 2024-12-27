@@ -15,6 +15,7 @@ type Service = {
   title: string;
   image: string;
   details: string;
+  listItems?: string[];
 };
 
 type ServiceDetailProps = {
@@ -75,6 +76,12 @@ export default function ServiceDetail({ params }: ServiceDetailProps) {
             {" "}
             <Details content={service.details} />
           </p>
+
+          {/* <ul>
+            {service.listItems.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul> */}
         </section>
       </Container>
       <section className="Specialize__Trades">

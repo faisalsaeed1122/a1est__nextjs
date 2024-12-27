@@ -20,7 +20,7 @@ export default function Header() {
       <div className={styles.menuContainer}>
         <Link href="/" className={styles.logo}>
           <Image
-            src="/beta/assets/images/logo.webp"
+            src="/assets/images/logo.webp"
             alt="A1estimation"
             width={148}
             height={74}

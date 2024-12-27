@@ -5,7 +5,15 @@
     "title": "cost estimating",
     "description": "A detailed construction cost estimation is necessary for predicting the cost of any facility or structure under construction. It is an important part of the overall cost management for the builder, as well as necessary for budget adherence.",
     "details": "A detailed construction cost estimation is necessary for predicting the cost of any facility or structure under construction. It is an important part of the overall cost management for the builder, as well as necessary for budget adherence.\n A1 Estimation Inc. offer cost estimates for Owners, Architects, Engineers and Contractors. We have provided estimating services for nearly all building types ranging from single family housing to stadiums and arenas. Other projects have included college and university facilities, rehabilitation of significant historic buildings as well as office, retail, judicial, industrial and educational buildings.\n A1 Estimation Inc. provide cost estimating services from pre-design through bid document stages. Our estimating staff has extensive on-site experience and a thorough knowledge of job conditions, labor productivity, and operations. Our project managers and estimators can advise on cost issues from first discussions through completion of the estimate. Our success in providing detailed and professional estimates is a result of our comprehensive database of material and labor pricing combined with our familiarity of various market conditions. \nOur team uses software such as Bluebeam, On -Screen Takeoff, PlanSwift, Sage Timberline, Revit, Callidus, AutoCAD & Microsoft Excel, and is able to meet unique client requirements as necessary. We specialize in preparing every type of estimate you would need including conceptual estimates, bid estimates, and construction cost estimates. Our services include:",
-    "image": "../assets/images/cost-estimation.jpg"
+    "image": "../assets/images/cost-estimation.jpg",
+    "listItems": [
+      "BIM Estimate",
+      "Budget Estimate",
+      "Building Estimates Overview",
+      "Conceptual Estimate",
+      "Estimate the Cost of Building a House",
+      "Preliminary Estimate"
+    ]
   },
   {
     "id": "2",

@@ -12,29 +12,17 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/services/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/services/page.css",
-      "static/chunks/app/services/page.js"
-    ],
-    "/services/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/services/[slug]/page.css",
-      "static/chunks/app/services/[slug]/page.js"
-    ],
     "/faqs/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/faqs/page.css",
       "static/chunks/app/faqs/page.js"
     ],
-    "/about/page": [
+    "/services/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/about/page.css",
-      "static/chunks/app/about/page.js"
+      "static/css/app/services/page.css",
+      "static/chunks/app/services/page.js"
     ],
     "/contact/page": [
       "static/chunks/webpack.js",
@@ -42,10 +30,17 @@
       "static/css/app/contact/page.css",
       "static/chunks/app/contact/page.js"
     ],
-    "/not-found": [
+    "/about/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/css/app/about/page.css",
+      "static/chunks/app/about/page.js"
+    ],
+    "/services/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/services/[slug]/page.css",
+      "static/chunks/app/services/[slug]/page.js"
     ]
   }
 }

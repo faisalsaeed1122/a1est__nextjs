@@ -53,7 +53,7 @@ function Footer() {
             className={styles.logo}
           >
             <Image
-              src="/beta/assets/images/wearecreative-logo.svg"
+              src="/assets/images/wearecreative-logo.svg"
               alt="Wearecreative"
               width={35}
               height={30}
