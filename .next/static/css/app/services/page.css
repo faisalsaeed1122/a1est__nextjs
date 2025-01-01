@@ -844,6 +844,7 @@ button.swiper-pagination-bullet {
   -moz-border-radius: 20px;
   width: 100%;
   transition: all 0.6s ease;
+  margin: 0;
 }
 .services_serviceCard__wrapper__Zc19e .services_service__card__pJgw9 .services_image__holder__9Dn2d img {
   position: absolute;

@@ -4,9 +4,8 @@ import { Rajdhani } from "next/font/google";
 
 // import { inter } from "@/app/ui/fonts";
 import "bootstrap-icons/font/bootstrap-icons.css";
-
-import "../public/assets/scss/custom-bootstrap.scss";
 import "./globals.scss";
+import "../public/assets/scss/custom-bootstrap.scss";
 
 const rajdhani = Rajdhani({
   subsets: ["latin"], // Specify the subsets you need

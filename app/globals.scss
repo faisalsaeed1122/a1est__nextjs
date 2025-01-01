@@ -21,6 +21,7 @@
 // }
 
 /* global.css */
+
 :root {
   --bg-color: #f3f3f7;
   --text-color: #2b2d42;
@@ -44,10 +45,9 @@
   --getstarted-bg: #d90429;
   --section-bg: #333;
 }
-
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
 }
 h1,
 h2,
@@ -148,7 +148,7 @@ section {
   overflow: hidden;
   height: 400px;
   position: relative;
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   @include margin(50px, 100px, 50px, 100px);
@@ -156,7 +156,7 @@ section {
 
   @media (max-width: 767.98px) {
     @include margin(2rem, 0, 2rem, 0);
-    height: auto;
+    height: 500px;
   }
 
   img {
@@ -231,7 +231,7 @@ section {
   @include margin(0, 0, 1rem, 0);
   .accordion-item {
     @include margin(0, 0, 1rem, 0);
-    @include border-radius(20px);
+    @include border-radius(10px);
     border: 0;
 
     .accordion-button {
