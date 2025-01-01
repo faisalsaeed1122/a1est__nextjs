@@ -14229,7 +14229,12 @@ textarea.form-control-lg {
   margin-right: 0;
   margin-bottom: 30px;
   margin-left: 0;
-  font-size: 2rem;
+  font-size: 30px;
+}
+@media (max-width: 767.98px) {
+  .welcome__wrap p {
+    font-size: 24px;
+  }
 }
 
 .Specialize__Trades {
@@ -14422,6 +14427,7 @@ textarea.form-control-lg {
 :root {
   --bg-color: #f3f3f7;
   --text-color: #2b2d42;
+  --accordion-text-color: #333;
   --heading-color: #2b2d42;
   --card-bg: #ffffff;
   --heading-lg: rgba(43, 45, 66, 0.2);
@@ -14433,6 +14439,7 @@ textarea.form-control-lg {
 .dark {
   --bg-color: #121212;
   --text-color: #ffffff;
+  --accordion-text-color: #333;
   --heading-color: #ffffff;
   --card-bg: #333;
   --heading-lg: rgba(255, 255, 255, 0.2);
@@ -14537,12 +14544,11 @@ section {
 }
 
 .heading__lg {
-  font-size: 14rem;
+  font-size: 12rem;
   font-weight: 700;
-  margin-bottom: -71px;
+  margin-bottom: -60px;
   color: var(--heading-lg);
   position: relative;
-  z-index: 1;
 }
 @media (max-width: 767.98px) {
   .heading__lg {
@@ -14725,6 +14731,7 @@ section {
   margin-left: 0;
   font-weight: 400;
   font-size: 20px;
+  color: var(--accordion-text-color);
 }
 
 .accordion-button:not(.collapsed) {

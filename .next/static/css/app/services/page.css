@@ -142,7 +142,6 @@
 
 .header_navLinks__RNTW5 {
   display: flex;
-  gap: 0.3rem;
 }
 
 .header_navItem__K9G1g {
@@ -961,4 +960,9 @@ button.swiper-pagination-bullet {
 }
 .services_serviceDetail__wrapper__F_y_w p {
   font-size: 30px;
+}
+@media (max-width: 767.98px) {
+  .services_serviceDetail__wrapper__F_y_w p {
+    font-size: 24px;
+  }
 }

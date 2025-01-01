@@ -45,8 +45,8 @@ export default function Header() {
           <Link href="/contact" className={styles.navItem}>
             Contact
           </Link>
-          <DarkModeToggle />
         </div>
+        <DarkModeToggle />
 
         {/* Toggle Button */}
         <button className={styles.hamburger} onClick={toggleMenu}>
