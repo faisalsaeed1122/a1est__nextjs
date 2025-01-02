@@ -19,6 +19,44 @@ import {
 } from "swiper/modules";
 
 export default function TestimonialSwiper() {
+  const data = [
+    {
+      id: 1,
+      description:
+        "I was amazed at how accurate the estimates provided by [Your Website Name] were. They gave me a clear understanding of costs upfront, which helped me budget effectively for my home renovation. The process was seamless and saved me so much time!",
+      name: "Lisa M.",
+      designation: "Homeowner",
+    },
+    {
+      id: 2,
+      description:
+        "As a contractor, I rely on precise cost estimates to ensure my projects run smoothly. [Your Website Name] provided detailed, transparent estimates that were spot-on. It’s a game-changer for my business!",
+      name: "Kevin R.",
+      designation: "General Contractor",
+    },
+    {
+      id: 3,
+      description:
+        "I needed a quick and reliable cost breakdown for my office remodeling project, and [Your Website Name] delivered. Their platform was easy to use, and the estimates were comprehensive. Highly recommend their services!",
+      name: "Priya S.",
+      designation: "Business Owner",
+    },
+    {
+      id: 4,
+      description:
+        "The construction estimation services from [Your Website Name] were a lifesaver! They highlighted all the potential costs, so I could plan accordingly without unexpected surprises. Their expertise made the whole process stress-free.",
+      name: "Mark T.",
+      designation: "Property Developer",
+    },
+    {
+      id: 5,
+      description:
+        "I appreciate the clarity and professionalism of [Your Website Name]. Their detailed cost estimates helped me make informed decisions about my building project. I’ll definitely use them for future projects!",
+      name: "Jane D.",
+      designation: "Architect",
+    },
+  ];
+
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]} // Enable required modules
@@ -30,36 +68,19 @@ export default function TestimonialSwiper() {
       grabCursor={true}
       className="Testimonial__Slider"
     >
-      <SwiperSlide>
-        <div class="item">
-          <div class="testimonial-holder">
-            <p class="testimonial-holder__testi">
-              Team are excellent to work with as always. They would go a step
-              further on suggestions and recommendations that best fit your
-              needs. Amazing communication, quality work, and exceeding
-              expectations!
-            </p>
-            <span class="testimonial-holder__name">Joseph William</span>
-            <span class="testimonial-holder__designation">Co Founder</span>
+      {data.map((item) => (
+        <SwiperSlide key={item.id}>
+          <div class="item">
+            <div class="testimonial-holder">
+              <p class="testimonial-holder__testi">{item.description}</p>
+              <span class="testimonial-holder__name">{item.name}</span>
+              <span class="testimonial-holder__designation">
+                {item.designation}
+              </span>
+            </div>
           </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div class="item">
-          <div class="testimonial-holder">
-            <p class="testimonial-holder__testi">
-              Fantastic work! I am just impressed by their service quality and
-              working strategy. They have a great expertise, are dedicated,
-              attentive, talented and care much about the client needs. Highly
-              recommended.
-            </p>
-            <span class="testimonial-holder__name">Reece Michael</span>
-            <span class="testimonial-holder__designation">
-              Managing Director
-            </span>
-          </div>
-        </div>
-      </SwiperSlide>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }

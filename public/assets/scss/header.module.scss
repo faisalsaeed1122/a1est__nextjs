@@ -67,14 +67,14 @@
   @include border-radius(50px);
 
   .hamburgerIcon {
-    font-size: 24px;
+    font-size: 32px;
     i {
       display: flex;
     }
   }
 
   .closeIcon {
-    font-size: 24px;
+    font-size: 32px;
     i {
       display: flex;
     }
@@ -94,6 +94,22 @@
     right: 0;
     width: 100%;
     padding: 1rem;
+    margin-top: 8px;
+
+    &:after {
+      bottom: 100%;
+      right: 34px;
+      border: solid transparent;
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(255, 255, 255, 0);
+      border-bottom-color: #fff;
+      border-width: 8px;
+      margin-left: -8px;
+    }
   }
 
   .show {
